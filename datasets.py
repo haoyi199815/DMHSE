@@ -1,7 +1,5 @@
-from cgitb import text
 from torch.utils.data import Dataset
 import numpy as np
-from torch.autograd import Variable
 import torch
 
 class MyDataset(Dataset):

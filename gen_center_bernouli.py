@@ -2,7 +2,6 @@
 import torch
 import random
 import numpy as np
-import csv
 from easydict import EasyDict
 import yaml #yaml
 from scipy.special import comb, perm  #calculate combination

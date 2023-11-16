@@ -8,3 +8,19 @@ The pressing need for low storage and high efﬁciency has signiﬁcantly propel
 
 ## Approach
 
+| ![DMHSE](docs/DMHSE.png) |
+|:--:|
+
+## Usage
+
+```
+pip install -r requirements.txt
+```
+
+After embedding various modal information from micro-videos into the same dimensions and saving them as 'npy' files in the 'datasets' folder, you can adjust the corresponding model parameters in the 'args.yaml' file. Subsequently, use the following command to train the model.
+
+```
+python main.py
+```
+
+
