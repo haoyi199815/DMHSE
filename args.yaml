@@ -1,0 +1,78 @@
+PARAMETER:
+  # Path to save hash center
+  hash_center_path: ./hash_center/
+  # Path of datasets
+  datasets_path: ./datasets/
+  # Path to save prompt features
+  prompt_path: ./prompt/
+  # Path to save fusion video representation by FoldCoder
+  fusion_h_path: ./fusion_h/
+
+  # Path to save tensorboard plot
+  tensorboard: ./plot/
+  # Path to save model checkpoint
+  ckpt_path: ./run/
+  # Path to save log info
+  log: ./log/run.txt
+
+  # Train or Test Switch: 0 - OFF | 1 - ON
+  train: 1
+  test: 1
+
+  # Each Stage Epochs
+  fusion_epochs: 30
+  gen_epochs: 100
+  hash_epochs: 200
+
+  # Batch Size
+  batch_size: 64
+
+  # Num of Fusion Modality
+  view_num: 3
+
+  # Num of data split
+  num_train: 16625
+  num_valid: 4211
+  num_test: 4147
+
+  # Num of Video Classes
+  classes: 63
+
+  # Loss Weight of FoldCoder
+  param_clip: 1
+  param_semantic: 1
+  param_gen: 1
+
+  # Loss Weight of HashCoder
+  param_central: 1
+  param_Q: 0.05
+  param_similar: 0.2
+
+  # Learning Rate of different module
+  fusion_lr: 0.001
+  gen_lr: 0.001
+  hash_lr : 0.001
+  text_lr: 0.001
+
+  # Loop Time of BackForward Process to Update the Parameter of Fusion H, Default set to 5 times
+  cm_loop: 5
+  # Gen and Hash Loop Default Set to 1
+  gen_loop: 1
+  hash_loop: 1
+
+  # Input Feature Dimension
+  feature_dim: 1024
+  # Output Hash Code Dimension
+  binary_dim: 64
+
+  # Cuda Device index
+  device: 1
+  # Top-K in Retrieval Process
+  K: 100
+  resume: 0
+
+  # Hyper-Param of Optimizer
+  optimizer:
+    momentum: 0.9
+    weight_decay: 0.0001
+    nesterov: True
